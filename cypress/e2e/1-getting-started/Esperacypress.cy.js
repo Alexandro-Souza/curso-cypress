@@ -32,4 +32,18 @@ describe('Espera',()=>{
         cy.get('#novoCampo', {timeout: 10000}).should('exist')
 
     })
+
+    it('Should vs Then',()=>{
+       
+        cy.get('#ButtonListDOM').click()
+        cy.get('#lista li span').then($el =>{
+            expect($el).to.have.length(1)
+            
+        })
+
+
+        
+    })
+
+
 })
