@@ -5,9 +5,12 @@ describe('locators', ()=>{
     before(()=>{
         cy.visit('https://wcaquino.me/cypress/componentes.html')
     })
-    
-    it('...',()=>{
+    // o xpath foi criado para criar caminhos em Xpath
+    it('usando o Xpath',()=>{
+        cy.xpath('//input[contains(@onclick,\'francisco\')]')
+        
         
     })
+
 
 })
