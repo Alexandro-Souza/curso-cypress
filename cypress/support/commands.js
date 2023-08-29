@@ -24,7 +24,9 @@
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 
+import cypress from 'cypress'
 import loc from './Locator'
+
 
 Cypress.Commands.add('ClickAlert',(locator, menssage)=>{
     cy.get(locator).click()
@@ -47,3 +49,38 @@ Cypress.Commands.add('ResetApp', () =>{
      
      
 })
+
+//Cypress.Commands.add('getToken', ('user, passwd') => {
+  //   cy.request({
+    //      method: 'POST',
+     //     url: 'https://barrigarest.wcaquino.me/signin',
+     //     body:{
+     //       email: user,
+     //       redirecionar: false,
+     //       senha: passwd
+     //     }
+     // }).its('body.token').should('not.be.empty')
+     //     .then(token =>{
+      //         return token
+       //   })
+//})
+
+/*Cypress.Commands.add('resetRest',()=>{
+     cy.getToken('souzajr1998@gmail.com', 'Teste123').then( => {
+          cy.request({
+               method: 'GET',
+               url: 'https://barrigarest.wcaquino.me/reset'
+     
+          })
+
+     })
+     cy.request({
+          method: 'GET',
+          url: 'https://barrigarest.wcaquino.me/reset',
+          headers: { Authorization: `JWT ${token}` },
+
+
+     })
+})
+
+*/
